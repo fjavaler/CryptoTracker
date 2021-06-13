@@ -8,25 +8,31 @@
 import SwiftUI
 
 class LocalFileManager {
+  // MARK: Properties
   static let instance = LocalFileManager() // Singleton instance
+  
+  // MARK: Init
   private init() {}
   
   // MARK: Methods
   
-  
   /// We can't save an image directly to FileManager, therefore, we must send image's data to it instead.
   /// - Parameter image: The image to save.
   func saveImage(image: UIImage, imageName: String, folderName: String) {
+    // Checks if save folder exists, if not creates.
+    createFolderIfNeeded(folderName: folderName)
+    
+    // Get path for image.
     guard let data = image.pngData(),
           let url = getURLForImage(imageName: imageName, folderName: folderName)
     else {return}
     
+    // Writes image to path.
     do {
       try data.write(to: url)
     } catch let error {
-      print("Error saving image. \(error)")
+      print("Error saving image. ImageName: \(imageName). \(error)")
     }
-    
   }
   
   /// Gets the URL for the caches directory save folder.
@@ -38,6 +44,20 @@ class LocalFileManager {
     }
     
     return url.appendingPathComponent(folderName)
+  }
+  
+  /// Creates a folder if it is needed, else, does nothing.
+  /// - Parameter folderName: The of the folder to check if exists, if not, creates.
+  private func createFolderIfNeeded(folderName: String) {
+    guard let url = getURLForFolder(folderName: folderName) else {return}
+    
+    if !FileManager.default.fileExists(atPath: url.path) {
+      do {
+        try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true, attributes: nil)
+      } catch let error {
+        print("Error creating directory. FolderName: \(folderName). \(error)")
+      }
+    }
   }
   
   /// Gets the URL for the folder and appends the image name + ".png."
