@@ -5,9 +5,11 @@
 //  Created by Fred Javalera on 6/12/21.
 //
 
+import Foundation
 import SwiftUI
 
 class LocalFileManager {
+  
   // MARK: Properties
   static let instance = LocalFileManager() // Singleton instance
   
@@ -19,7 +21,8 @@ class LocalFileManager {
   /// We can't save an image directly to FileManager, therefore, we must send image's data to it instead.
   /// - Parameter image: The image to save.
   func saveImage(image: UIImage, imageName: String, folderName: String) {
-    // Checks if save folder exists, if not creates.
+    
+    // Checks if save folder exists, if not, creates.
     createFolderIfNeeded(folderName: folderName)
     
     // Get path for image.
@@ -27,12 +30,25 @@ class LocalFileManager {
           let url = getURLForImage(imageName: imageName, folderName: folderName)
     else {return}
     
-    // Writes image to path.
+    // Saves image to path.
     do {
       try data.write(to: url)
     } catch let error {
       print("Error saving image. ImageName: \(imageName). \(error)")
     }
+  }
+  
+  /// Gets an image by name.
+  /// - Parameters:
+  ///   - imageName: The name of the image.
+  ///   - folderName: The folder that the image is stored in.
+  /// - Returns: The image or nil.
+  func getImage(imageName: String, folderName: String) -> UIImage? {
+    guard let url = getURLForImage(imageName: imageName, folderName: folderName),
+          FileManager.default.fileExists(atPath: url.path) else {
+      return nil
+    }
+    return UIImage(contentsOfFile: url.path)
   }
   
   /// Gets the URL for the caches directory save folder.
