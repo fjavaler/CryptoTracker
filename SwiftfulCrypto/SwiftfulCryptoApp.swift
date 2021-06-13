@@ -10,6 +10,11 @@ import SwiftUI
 @main
 struct SwiftfulCryptoApp: App {
   
+  init() {
+    UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color.theme.accent)]
+    UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color.theme.accent)]
+  }
+  
   // MARK: Properties
   @StateObject private var vm = HomeViewModel()
   
