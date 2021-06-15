@@ -17,6 +17,7 @@ class HomeViewModel: ObservableObject {
   @Published var searchText: String = ""
   @Published var isLoading = false
   @Published var sortOption: SortOption = .holdings
+  
   private let coinDataService = CoinDataService()
   private let marketDataService = MarketDataService()
   private let portfolioDataService = PortfolioDataService()
@@ -33,13 +34,6 @@ class HomeViewModel: ObservableObject {
   
   // MARK: Methods
   func addSubscribers() {
-    
-    // Not needed since logic is already being performed in $searchText subscriber below.
-    //    dataService.$allCoins
-    //      .sink { [weak self] returnedCoins in
-    //        self?.allCoins = returnedCoins
-    //      }
-    //      .store(in: &cancellables)
     
     // Updates allCoins.
     $searchText
