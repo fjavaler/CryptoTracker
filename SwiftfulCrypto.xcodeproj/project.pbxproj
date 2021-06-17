@@ -26,12 +26,14 @@
 		AC47CBD026752CA900BE5970 /* CoinImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC47CBCF26752CA900BE5970 /* CoinImageService.swift */; };
 		AC47CBD226752E7000BE5970 /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC47CBD126752E7000BE5970 /* CoinImageViewModel.swift */; };
 		AC47CBD42675500E00BE5970 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC47CBD32675500E00BE5970 /* LocalFileManager.swift */; };
+		F802B38A267BA40B0039506F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802B389267BA40B0039506F /* SettingsView.swift */; };
 		F8942FCA267914D1002FCD4C /* CoinDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8942FC9267914D1002FCD4C /* CoinDetailModel.swift */; };
 		F8942FCC267917B6002FCD4C /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8942FCB267917B6002FCD4C /* DetailViewModel.swift */; };
 		F8942FCE267917F1002FCD4C /* CoinDetailDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8942FCD267917F1002FCD4C /* CoinDetailDataService.swift */; };
 		F8942FD02679319C002FCD4C /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8942FCF2679319C002FCD4C /* ChartView.swift */; };
 		F8942FD226793775002FCD4C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8942FD126793775002FCD4C /* Date.swift */; };
 		F8942FD426793F9E002FCD4C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8942FD326793F9E002FCD4C /* String.swift */; };
+		F8942FDC26795887002FCD4C /* SwiftfulCryptoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8942FDB26795887002FCD4C /* SwiftfulCryptoUITests.swift */; };
 		F8AE0FBA26759F5600D4FFDA /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE0FB926759F5600D4FFDA /* SearchBarView.swift */; };
 		F8AE0FBC2675A26E00D4FFDA /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE0FBB2675A26E00D4FFDA /* UIApplication.swift */; };
 		F8AE0FBE2675A76C00D4FFDA /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE0FBD2675A76C00D4FFDA /* StatisticModel.swift */; };
@@ -47,6 +49,16 @@
 		F8E3475826781E6100CE00A6 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3475726781E6100CE00A6 /* HapticManager.swift */; };
 		F8E3475D2678284900CE00A6 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3475C2678284900CE00A6 /* DetailView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F8942FDE26795887002FCD4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC47CB902673BD1D00BE5970 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC47CB972673BD1D00BE5970;
+			remoteInfo = SwiftfulCrypto;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AC47CB982673BD1D00BE5970 /* SwiftfulCrypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftfulCrypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,12 +82,16 @@
 		AC47CBCF26752CA900BE5970 /* CoinImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift; sourceTree = "<group>"; };
 		AC47CBD126752E7000BE5970 /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
 		AC47CBD32675500E00BE5970 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
+		F802B389267BA40B0039506F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		F8942FC9267914D1002FCD4C /* CoinDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailModel.swift; sourceTree = "<group>"; };
 		F8942FCB267917B6002FCD4C /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		F8942FCD267917F1002FCD4C /* CoinDetailDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailDataService.swift; sourceTree = "<group>"; };
 		F8942FCF2679319C002FCD4C /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		F8942FD126793775002FCD4C /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		F8942FD326793F9E002FCD4C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		F8942FD926795887002FCD4C /* SwiftfulCryptoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftfulCryptoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8942FDB26795887002FCD4C /* SwiftfulCryptoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftfulCryptoUITests.swift; sourceTree = "<group>"; };
+		F8942FDD26795887002FCD4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8AE0FB926759F5600D4FFDA /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		F8AE0FBB2675A26E00D4FFDA /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		F8AE0FBD2675A76C00D4FFDA /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
@@ -100,6 +116,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8942FD626795887002FCD4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -107,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				AC47CB9A2673BD1D00BE5970 /* SwiftfulCrypto */,
+				F8942FDA26795887002FCD4C /* SwiftfulCryptoUITests */,
 				AC47CB992673BD1D00BE5970 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				AC47CB982673BD1D00BE5970 /* SwiftfulCrypto.app */,
+				F8942FD926795887002FCD4C /* SwiftfulCryptoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,6 +188,7 @@
 				AC47CBB52673C6F600BE5970 /* Components */,
 				AC47CBB02673C61A00BE5970 /* Home */,
 				F8E347592678281200CE00A6 /* Detail */,
+				F802B387267BA3C80039506F /* Settings */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -260,6 +286,31 @@
 			path = CoinImage;
 			sourceTree = "<group>";
 		};
+		F802B387267BA3C80039506F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F802B388267BA3EA0039506F /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F802B388267BA3EA0039506F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F802B389267BA40B0039506F /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F8942FDA26795887002FCD4C /* SwiftfulCryptoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F8942FDB26795887002FCD4C /* SwiftfulCryptoUITests.swift */,
+				F8942FDD26795887002FCD4C /* Info.plist */,
+			);
+			path = SwiftfulCryptoUITests;
+			sourceTree = "<group>";
+		};
 		F8E347592678281200CE00A6 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +357,24 @@
 			productReference = AC47CB982673BD1D00BE5970 /* SwiftfulCrypto.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F8942FD826795887002FCD4C /* SwiftfulCryptoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8942FE226795887002FCD4C /* Build configuration list for PBXNativeTarget "SwiftfulCryptoUITests" */;
+			buildPhases = (
+				F8942FD526795887002FCD4C /* Sources */,
+				F8942FD626795887002FCD4C /* Frameworks */,
+				F8942FD726795887002FCD4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8942FDF26795887002FCD4C /* PBXTargetDependency */,
+			);
+			name = SwiftfulCryptoUITests;
+			productName = SwiftfulCryptoUITests;
+			productReference = F8942FD926795887002FCD4C /* SwiftfulCryptoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -317,6 +386,10 @@
 				TargetAttributes = {
 					AC47CB972673BD1D00BE5970 = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					F8942FD826795887002FCD4C = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = AC47CB972673BD1D00BE5970;
 					};
 				};
 			};
@@ -334,6 +407,7 @@
 			projectRoot = "";
 			targets = (
 				AC47CB972673BD1D00BE5970 /* SwiftfulCrypto */,
+				F8942FD826795887002FCD4C /* SwiftfulCryptoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -345,6 +419,13 @@
 			files = (
 				AC47CBA32673BD1E00BE5970 /* Preview Assets.xcassets in Resources */,
 				AC47CBAB2673BDD500BE5970 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8942FD726795887002FCD4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,10 +473,27 @@
 				F8942FCE267917F1002FCD4C /* CoinDetailDataService.swift in Sources */,
 				F8942FCC267917B6002FCD4C /* DetailViewModel.swift in Sources */,
 				F8E347562677AD8D00CE00A6 /* PortfolioDataService.swift in Sources */,
+				F802B38A267BA40B0039506F /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8942FD526795887002FCD4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8942FDC26795887002FCD4C /* SwiftfulCryptoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8942FDF26795887002FCD4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC47CB972673BD1D00BE5970 /* SwiftfulCrypto */;
+			targetProxy = F8942FDE26795887002FCD4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AC47CBA52673BD1E00BE5970 /* Debug */ = {
@@ -558,6 +656,44 @@
 			};
 			name = Release;
 		};
+		F8942FE026795887002FCD4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G6J4RFMLHY;
+				INFOPLIST_FILE = SwiftfulCryptoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frederickjavalera.SwiftfulCryptoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftfulCrypto;
+			};
+			name = Debug;
+		};
+		F8942FE126795887002FCD4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G6J4RFMLHY;
+				INFOPLIST_FILE = SwiftfulCryptoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frederickjavalera.SwiftfulCryptoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftfulCrypto;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -575,6 +711,15 @@
 			buildConfigurations = (
 				AC47CBA82673BD1E00BE5970 /* Debug */,
 				AC47CBA92673BD1E00BE5970 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8942FE226795887002FCD4C /* Build configuration list for PBXNativeTarget "SwiftfulCryptoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8942FE026795887002FCD4C /* Debug */,
+				F8942FE126795887002FCD4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
