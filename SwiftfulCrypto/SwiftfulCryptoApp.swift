@@ -10,22 +10,34 @@ import SwiftUI
 @main
 struct SwiftfulCryptoApp: App {
   
+  // MARK: Properties
+  @StateObject private var vm = HomeViewModel()
+  @State private var showLaunchView: Bool = true
+  
+  // MARK: Init
   init() {
     UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color.theme.accent)]
     UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color.theme.accent)]
   }
   
-  // MARK: Properties
-  @StateObject private var vm = HomeViewModel()
-  
   // MARK: Body
   var body: some Scene {
     WindowGroup {
-      NavigationView {
-        HomeView()
-          .navigationBarHidden(true)
+      ZStack {
+        NavigationView {
+          HomeView()
+            .navigationBarHidden(true)
+        }
+        .environmentObject(vm)
+        
+        ZStack {
+          if showLaunchView {
+            LaunchView(showLaunchView: $showLaunchView)
+              .transition(.move(edge: .leading))
+          }
+        }
+        .zIndex(2.0)
       }
-      .environmentObject(vm)
     }
   }
 }
