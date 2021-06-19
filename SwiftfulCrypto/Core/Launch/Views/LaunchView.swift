@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LaunchView: View {
   
+  // MARK: Properties
   @State private var loadingText: [String] = "Loading your portfolio...".map{ String($0) }
   @State private var showLoadingText: Bool = false
   let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
@@ -16,6 +17,7 @@ struct LaunchView: View {
   @State private var loops: Int = 0
   @Binding var showLaunchView: Bool
   
+  // MARK: Body
   var body: some View {
     ZStack {
       Color.launch.background
@@ -61,6 +63,7 @@ struct LaunchView: View {
   }
 }
 
+// MARK: Preview
 struct LaunchView_Previews: PreviewProvider {
   static var previews: some View {
     LaunchView(showLaunchView: .constant(true))

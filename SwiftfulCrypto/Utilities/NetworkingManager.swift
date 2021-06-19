@@ -31,9 +31,12 @@ class NetworkingManager {
   /// - Returns: A generic Publisher.
   static func download(url: URL) -> AnyPublisher<Data, Error> {
     return URLSession.shared.dataTaskPublisher(for: url)
-      .subscribe(on: DispatchQueue.global(qos: .default))
+    // Not needed since dataTaskPublisher is already on a background thread.
+//      .subscribe(on: DispatchQueue.global(qos: .default))
       .tryMap({ try handleURLResponse(output: $0, url: url) })
-      .receive(on: DispatchQueue.main)
+    // Moving the following line to each service that calls this method instead.
+//      .receive(on: DispatchQueue.main)
+      .retry(3)
       .eraseToAnyPublisher()
   }
   

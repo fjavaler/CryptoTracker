@@ -37,11 +37,11 @@ struct HomeView: View {
         
         if !showPortfolio {
           allCoinsList
-          .transition(.move(edge: .leading))
+            .transition(.move(edge: .leading))
         }
         
         if showPortfolio {
-          ZStack {
+          ZStack(alignment: .top) {
             if vm.portfolioCoins.isEmpty && vm.searchText.isEmpty {
               portfolioEmptyText
             } else {
@@ -80,6 +80,7 @@ struct HomeView_Previews: PreviewProvider {
 // MARK: Extensions
 extension HomeView {
   
+  // MARK: HomeHeader
   private var homeHeader: some View {
     HStack {
       CircleButtonView(iconName: showPortfolio ? "plus" : "info")
@@ -110,6 +111,7 @@ extension HomeView {
     .padding(.horizontal)
   }
   
+  // MARK: AllCoinsList
   private var allCoinsList: some View {
     List {
       ForEach(vm.allCoins) { coin in
@@ -123,9 +125,10 @@ extension HomeView {
     .listStyle(PlainListStyle())
   }
   
+  // MARK: PortfolioCoinsList
   private var portfolioCoinsList: some View {
     List {
-      ForEach(vm.allCoins) { coin in
+      ForEach(vm.portfolioCoins) { coin in
         CoinRowView(coin: coin, showHoldingsColumn: true)
           .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
           .onTapGesture {
@@ -136,20 +139,17 @@ extension HomeView {
     .listStyle(PlainListStyle())
   }
   
+  // MARK: PortfolioEmptyText
   private var portfolioEmptyText: some View {
-          Text("You haven't added any coins to your portfolio yet. Click the + button to get started! 🧐")
-              .font(.callout)
-              .foregroundColor(Color.theme.accent)
-              .fontWeight(.medium)
-              .multilineTextAlignment(.center)
-              .padding(50)
-      }
-  
-  private func segue(coin: CoinModel) {
-    selectedCoin = coin
-    showDetailView.toggle()
+    Text("You haven't added any coins to your portfolio yet. Click the + button to get started! 🧐")
+      .font(.callout)
+      .foregroundColor(Color.theme.accent)
+      .fontWeight(.medium)
+      .multilineTextAlignment(.center)
+      .padding(50)
   }
   
+  // MARK: ColumnTitles
   private var columnTitles: some View {
     HStack {
       HStack {
@@ -198,10 +198,16 @@ extension HomeView {
       }, label: {
         Image(systemName: "goforward")
       })
-      .rotationEffect(Angle(degrees: vm.isLoading ? 360 : 0), anchor: .center)
+        .rotationEffect(Angle(degrees: vm.isLoading ? 360 : 0), anchor: .center)
     }
     .font(.caption)
     .foregroundColor(Color.theme.secondaryText)
     .padding(.horizontal)
+  }
+  
+  // MARK: Segue
+  private func segue(coin: CoinModel) {
+    selectedCoin = coin
+    showDetailView.toggle()
   }
 }
