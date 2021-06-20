@@ -9,9 +9,11 @@ import SwiftUI
 
 struct CoinRowView: View {
   
+  // MARK: Properties
   let coin: CoinModel
   let showHoldingsColumn: Bool
   
+  // MARK: Body
   var body: some View {
     HStack(spacing: 0) {
       leftColumn

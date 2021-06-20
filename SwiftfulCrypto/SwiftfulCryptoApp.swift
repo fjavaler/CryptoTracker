@@ -18,6 +18,8 @@ struct SwiftfulCryptoApp: App {
   init() {
     UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color.theme.accent)]
     UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color.theme.accent)]
+    UINavigationBar.appearance().tintColor = UIColor(Color.theme.accent)
+    UITableView.appearance().backgroundColor = UIColor.clear
   }
   
   // MARK: Body
